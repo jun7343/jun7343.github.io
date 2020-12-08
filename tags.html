@@ -1,0 +1,24 @@
+---
+layout: default
+title: tags
+---
+{% assign tags = "" | split: "" %}
+{% for t in site.tags %}
+  {% assign tags = tags | push: t[0] %}
+{% endfor %}
+
+{% assign sorted_tags = tags | sort_natural %}
+<div class="post-list">
+  <article class="post card container">
+    <header class="post-header">
+      <h1>Tags</h1>
+    </header>
+    <div class="post-content">
+      <ul>
+      {% for t in sorted_tags %}
+        <li><a href="{{ site.baseurl }}/tags/{{ t | replace: ' ', '-' | downcase | url_encode }}/">{{t}}</a></li>  
+      {% endfor %}
+      </ul>
+    </div>
+  </article>
+</div>
