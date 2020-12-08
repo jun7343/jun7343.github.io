@@ -9,16 +9,18 @@ title: tags
 
 {% assign sorted_tags = tags | sort_natural %}
 <div class="post-list">
+  {% for t in sorted_tags %}
   <article class="post card container">
     <header class="post-header">
-      <h1>Tags</h1>
+      <h1>{{ t }}</h1>
     </header>
     <div class="post-content">
       <ul>
-      {% for t in sorted_tags %}
-        <li><a href="{{ site.baseurl }}/tags/{{ t | replace: ' ', '-' | downcase | url_encode }}/">{{t}}</a></li>  
-      {% endfor %}
+        {% for p in site.tags.[t] %}
+        <li><a href="{{ p.url }}/">{{ p.title }}</a></li> 
+        {% endfor %}
       </ul>
     </div>
   </article>
+  {% endfor %}
 </div>
