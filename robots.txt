@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jun7343.github.io/sitemap.xml
