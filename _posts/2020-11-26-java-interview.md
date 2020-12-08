@@ -2,11 +2,8 @@
 layout: post
 title: "JAVA 기본 기술 면접 예상 질문"
 comments: true
-categories: 
-  - java
 tags: 
-  - java
-  - interview
+  - Interview
 ---
 
 기술면접에 대비하여 JAVA에 관련한 기본 기술 질문을 나열해보려 한다. 잘못된 부분이 있으면 수정토록 하겠습니다.

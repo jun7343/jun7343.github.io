@@ -2,11 +2,9 @@
 layout: post
 title: "자료구조와 알고리즘 공부하기 좋은 유튜브 채널 추천"
 comments: true
-categories: 
-  - etc
 tags: 
-  - algorithm
-  - data-structure
+  - Data structure
+  - Algorithm
 ---
 
 이전에는 알고리즘이나 자료구조, CS 지식을 쌓기위해 인터넷 강의를 통해 학습하거나 학과 강의를 통해서 학습하기도 했었다.   

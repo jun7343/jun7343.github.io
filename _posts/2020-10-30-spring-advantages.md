@@ -2,11 +2,8 @@
 layout: post
 title: "Spring의 장점"
 comments: true
-categories: 
-  - back-end
 tags: 
-  - spring
-  - back-end
+  - Spring
 ---
 
 ### 포스트 내용

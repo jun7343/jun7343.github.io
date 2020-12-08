@@ -2,11 +2,8 @@
 layout: post
 title: "Spring과 Node js의 차이"
 comments: true
-categories: 
-  - back-end
 tags: 
-  - spring
-  - node
+  - Spring
 ---
 
 ### Spring과 Node js

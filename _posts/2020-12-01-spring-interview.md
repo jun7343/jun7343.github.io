@@ -2,11 +2,9 @@
 layout: post
 title: "Spring 기본 기술 면접 예상 질문"
 comments: true
-categories: 
-  - spring
 tags: 
-  - spring
-  - interview
+  - Spring
+  - Interview
 ---
 
 기술면접에 대비하여 Spring에 관련한 기본 기술 질문을 나열해보려 한다. 잘못된 부분이 있으면 수정토록 하겠습니다.

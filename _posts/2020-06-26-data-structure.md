@@ -2,10 +2,8 @@
 layout: post
 title: "자료구조란"
 comments: true
-categories: 
-  - data-structure
 tags: 
-  - 자료구조
+  - Data structure
 ---
 ### 자료구조를 왜 공부해야하는가?   
 이전 코딩을 접해보았을때 나는 단순히 코드만 작성하고 돌아가기만 하면 되지 라는 막연한 생각을 했다.   

@@ -2,11 +2,8 @@
 layout: post
 title: "Database 기본 기술 면접 예상 질문"
 comments: true
-categories: 
-  - database
 tags: 
-  - database
-  - interview
+  - Interview
 ---
 
 기술 면접에 앞서 Database 관련 예상 질문을 나열해 본다. 해당 질문들은 다른 개발자 블로그 분들 글을 정리하였다.
