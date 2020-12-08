@@ -6,13 +6,13 @@ baseurl: ""
 url: "https://jun7343.github.io"
 
 author:
-  name     : 'Jun Yu'
+  name     : Jun Yu
   email    : zlsl7343@gmali.com
   url      : https://jun7343.github.io
   facebook : https://www.facebook.com/ohohoh333/
 
 github: https://github.com/jun7343
-disqus_shortname: "jun-dev-blog"
+disqus_shortname: jun-dev-blog
 #google_analytics: UA-52446115-1
 
 paginate: 10
