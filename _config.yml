@@ -1,0 +1,28 @@
+# Site settings
+title: Jun`s Blog
+email: zlsl7343@gmail.com
+description: Jun`s Development Blog
+baseurl: ""
+url: "http://nandomoreira.me"
+
+author:
+  name     : 'Jun Yu'
+  email    : zlsl7343@gmali.com
+  url      : http://nandomoreira.me
+  facebook : https://www.facebook.com/ohohoh333/
+
+github: https://github.com/jun7343
+disqus_shortname: "jun-dev-blog"
+#google_analytics: UA-52446115-1
+
+paginate: 10
+comments: true
+paginate_path: "/page/:num"
+
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+# Build settings
+markdown  : kramdown
+#permalink : /:title/
