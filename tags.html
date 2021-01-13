@@ -16,7 +16,7 @@ title: tags
     </header>
     <div class="post-content">
       <ul>
-        {% for p in site.tags.[t] %}
+        {% for p in site.tags[t] %}
         <li><a href="{{ p.url }}">{{ p.title }}</a></li> 
         {% endfor %}
       </ul>
