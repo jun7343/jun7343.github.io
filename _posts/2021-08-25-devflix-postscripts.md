@@ -8,15 +8,14 @@ tags:
 
 ### Devflix
 
-<a href="https://devflix.kr" target="_blank"><img src="/assets/images/projects/devflix-postscripts/devflix-home.png" alt="devflix"></a><br><br><br>
-
+<a href="https://devflix.kr" target="_blank"><img src="/assets/images/projects/devflix-postscripts/devflix-home.png" alt="devflix"></a><br>
 
 ### Devflix 개요
 
 - 프로젝트 제목: Devflix
 - 프로젝트 기간: 2021.03.15 ~ 2021.04.20
 - 프로젝트 인원: 1인
-- 사이트: https://devflix.kr
+- 사이트: [https://devflix.kr](https://devflix.kr)
 - 프로젝트 목적:
   - 다양한 개발 블로그 게시글 수집
   - 개발 관련 유튜브 영상 수집
@@ -24,12 +23,11 @@ tags:
   - Netflix의 다양한 장르의 영상을 한 곳에서 볼 수 있는 것에 착안하여 Devflix라 명칭
 - 프로젝트 기술 및 환경
   - Spring Boot, Handlebar, Ubuntu, Nginx, PostgreSQL, Intellij, JPA, QueryDSL, Junit5, JavaMail, Prometheus, Grafana
-<br><br><br>
-
+<br>
 
 ### 프로젝트 설계
 
-<img src="/assets/images/projects/devflix-postscripts/devflix-architecture.png"><br><br><br>
+<img src="/assets/images/projects/devflix-postscripts/devflix-architecture.png"><br>
 
 
 ### 프로젝트 후기
