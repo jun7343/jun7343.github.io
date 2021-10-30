@@ -1,5 +1,6 @@
 ---
 layout: page
+title:
 permalink: /about
 ---
 
@@ -26,20 +27,3 @@ permalink: /about
 ![Postman](https://img.shields.io/static/v1?style=for-the-badge&message=Postman&color=FF6C37&logo=Postman&logoColor=FFFFFF&label=)
 ![NGINX](https://img.shields.io/static/v1?style=for-the-badge&message=NGINX&color=009639&logo=NGINX&logoColor=FFFFFF&label=)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-
-## :rocket: My Projects
-
-- [Devflix](https://github.com/jun7343/devflix)
-
-## :weight_lifting_man: My Practice Repoitory
-
-- [Java Drill](https://github.com/jun7343/java-drill)
-- [Spring Security Drill](https://github.com/jun7343/spring-security-drill)
-
-## :muscle: Most Used Languages
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jun7343&hide_langs_below=1&theme=bear)](https://github.com/anuraghazra/github-readme-statsz)
-
-## :thermometer: Github Stats
-
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=jun7343&show_icons=true&theme=bear)](https://github.com/anuraghazra/github-readme-stats)
