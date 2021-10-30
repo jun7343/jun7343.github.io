@@ -1,10 +1,8 @@
 ---
 layout: page
-title:
+title: Hey! Nice to see you 👋
 permalink: /about
 ---
-
-# Hey! Nice to see you :wave:
 
 백엔드 개발자 유준 입니다.    
 주 사용 언어는 JAVA 이며, Spring Boot를 통한 백엔드 개발을 합니다. 가급적 깔끔하고 남들이 읽어도 읽기 쉬운 코드를 작성하기 좋아하며, 디자인 패턴에 기반한 유지보수가 용이한 코드 설계를 하려고 노력합니다.
