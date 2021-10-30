@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2020 SNS 관련 웹 프로젝트 시작"
+title: 2020 SNS 관련 웹 프로젝트 시작
 categories: [Prjects]
 ---
 

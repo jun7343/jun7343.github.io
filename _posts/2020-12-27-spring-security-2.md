@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring Security 초기 설정 방법"
+title: Spring Security 초기 설정 방법
 categories: [Spring Security]
 ---
 

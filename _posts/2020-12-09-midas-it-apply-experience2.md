@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2020 마이다스 아이티 하반기 공채 지원 후기[2]"
+title: 2020 마이다스 아이티 하반기 공채 지원 후기[2]
 categories: [Interview]
 ---
 

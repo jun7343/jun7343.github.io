@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring의 장점"
+title: Spring의 장점
 cateogories: [Spring]
 ---
 

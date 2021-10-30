@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2021 Kakao Blind Recruitment 코딩 테스트 후기"
+title: 2021 Kakao Blind Recruitment 코딩 테스트 후기
 categories: [Kakao]
 ---
 

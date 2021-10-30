@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "자료구조와 알고리즘 공부하기 좋은 유튜브 채널 추천" 
+title: 자료구조와 알고리즘 공부하기 좋은 유튜브 채널 추천
 categories: [Data Structure, Algorithm]
 ---
 

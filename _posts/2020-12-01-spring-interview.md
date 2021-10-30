@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring 기본 기술 면접 예상 질문"
+title: Spring 기본 기술 면접 예상 질문
 categories: [Spring, Intervies]
 ---
 

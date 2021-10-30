@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "개발자가 알아두면 좋은 사이트"
+title: 개발자가 알아두면 좋은 사이트
 categoies: [Info]
 ---
 

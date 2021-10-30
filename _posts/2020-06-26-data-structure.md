@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "자료구조란"
+title: 자료구조란
 categories: [Data Structure]
 ---
 ### 자료구조를 왜 공부해야하는가?   

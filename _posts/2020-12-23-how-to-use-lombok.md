@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lombok 잘 사용하는 방법"
+title: Lombok 잘 사용하는 방법
 categories: [JPA, Lombok]
 ---
 

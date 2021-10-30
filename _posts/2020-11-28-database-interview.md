@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Database 기본 기술 면접 예상 질문"
+title: Database 기본 기술 면접 예상 질문
 categories: [Interview, Database]
 ---
 

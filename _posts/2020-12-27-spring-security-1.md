@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring Security를 사용해 보자."
+title: Spring Security를 사용해 보자.
 categories: [Spring Security]
 ---
 

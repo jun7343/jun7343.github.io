@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Devflix 프로젝트 후기"
+title: Devflix 프로젝트 후기
 categories: [Projects]
 ---
 

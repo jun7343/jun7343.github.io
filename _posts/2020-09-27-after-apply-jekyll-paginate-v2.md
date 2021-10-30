@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll Paginate v2 적용 하기"
+title: Jekyll Paginate v2 적용 하기
 categories: [Jekyll]
 ---
 

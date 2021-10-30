@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Collection 종류와 이해"
+title: Collection 종류와 이해
 categories: [Data Structure]
 ---
 

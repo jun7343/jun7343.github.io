@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JAVA 기본 기술 면접 예상 질문"
+title: JAVA 기본 기술 면접 예상 질문
 categories: [Interview, Java]
 ---
 
