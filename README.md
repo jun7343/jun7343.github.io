@@ -4,5 +4,5 @@
 
 ### Jekyll theme
 
-[Jetsu](https://github.com/nandomoreirame/zetsu)
+[Forever Jekyll](https://github.com/forever-jekyll/forever-jekyll)
 

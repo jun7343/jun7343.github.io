@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Spring Security 초기 설정 방법"
-comments: true
-tags: 
-  - Spring Security
+categories: [Spring Security]
 ---
 
 ### Spring Security 초기 설정

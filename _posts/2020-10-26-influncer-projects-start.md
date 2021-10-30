@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "2020 SNS 관련 웹 프로젝트 시작"
-comments: true
-tags: 
-  - Prjects
+categories: [Prjects]
 ---
 
 ### 웹 프로젝트 내용

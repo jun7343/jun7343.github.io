@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Devflix 프로젝트 후기"
-comments: true
-tags: 
-  - Projects
+categories: [Projects]
 ---
 
 ### Devflix

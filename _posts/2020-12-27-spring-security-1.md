@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Spring Security를 사용해 보자."
-comments: true
-tags: 
-  - Spring Security
+categories: [Spring Security]
 ---
 
 ### Spring Security 란?

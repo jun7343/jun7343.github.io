@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Jekyll Paginate v2 적용 하기"
-comments: true
-tags: 
-  - Jekyll
+categories: [Jekyll]
 ---
 
 ### Jekyll Paginate v2 란?

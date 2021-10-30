@@ -1,10 +1,7 @@
 ---
 layout: post
 title: "Lombok 잘 사용하는 방법"
-comments: true
-tags: 
-  - JPA
-  - Lombok
+categories: [JPA, Lombok]
 ---
 
 기존에 Entity class를 생성하면서 Getter Setter 등 코드를 넣게되면 class 자체 내부에서 소스코드가 길어져서 보기가 안좋게 느껴진다.   

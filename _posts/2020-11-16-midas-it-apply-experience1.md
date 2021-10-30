@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "2020 마이다스 아이티 하반기 공채 지원 후기[1]"
-comments: true
-tags: 
-  - Interview
+categories: [Interview]
 ---
 
 ### 지원 과정 및 소개

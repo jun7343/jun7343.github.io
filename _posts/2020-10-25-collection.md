@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Collection 종류와 이해"
-comments: true
-tags: 
-  - Data structure
+categories: [Data Structure]
 ---
 
 ### Collection 이란? - Java Collection Framework (JCF)

@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "자바 Generic은 무엇이며 어떻게 사용하는가"
-comments: true
-tags: 
-  - Java
+categories: [Java]
 ---
 
 ### Generic 이란?

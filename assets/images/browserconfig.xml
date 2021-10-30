@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+	<msapplication>
+		<tile>
+			<link rel="icon" type="image/x-icon" href="/assets/images/icon/favicon.ico">
+			<TileColor>#ffffff</TileColor>
+		</tile>
+	</msapplication>
+</browserconfig>

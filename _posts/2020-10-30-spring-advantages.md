@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Spring의 장점"
-comments: true
-tags: 
-  - Spring
+cateogories: [Spring]
 ---
 
 ### 포스트 내용
