@@ -4,7 +4,7 @@ title: 싱글턴(Singleton)
 categories: [Design Pattern]
 ---
 
-GoF의 생성 패턴에 하나인 싱글턴 패턴에 대해서 알아본다.    
+GoF의 생성 패턴중 하나인 싱글턴 패턴에 대해서 알아본다.    
 
 ---
 
