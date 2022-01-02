@@ -2,7 +2,7 @@
 layout: post
 title: 빌더 패턴(Builder Pattern)
 categories: [Design Pattern]
-excerpt: GoF의 생성 패턴중 하나인 빌더 패턴에 대해서 알아본다."
+excerpt: GoF의 생성 패턴중 하나인 빌더 패턴에 대해서 알아본다.
 ---
 
 GoF의 생성 패턴중 하나인 빌더 패턴에 대해서 알아본다.
