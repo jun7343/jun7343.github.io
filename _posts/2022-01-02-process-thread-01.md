@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 프로세스의 스레드와 코어의 스레드 무슨 차이지?
+title: Core의 Thread는 무엇인가?
 categories: [OS, Thread, Multi Threading, Hyper Threading]
 excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 개발 공부하는 친구가 있다. 친구는 학습 도중 문득 나에게 "Thread는 물리적으로 한정적인거 아냐? 어떻게 계속 생성해서 쓸 수가 있는거야? 내가 학습한 바로는 ..." 이러한 질문을 내게 했다.
 ---
@@ -13,10 +13,11 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
 - [인프런의 운영체제 공룡책 강의](https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98/dashboard)
 - [운영체제 - 이화여자대학교 반효경 교수님](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
 
+이번 포스트에서는 Core의 Thread를 설명할 예정이다.
+
 # Core의 Thread??
 
-필자는 Core와 Thread 두가지를 동시에 얘기하는데 읽는 사람으로써는 왜 두가지를 동시에 얘기하는지 의구심을 들것같다. 아래는 필자가 얘기하는 Core의 Thread 사진이다.
-아래 사진에서 말하는 Thread가 친구가 말하는 물리적으로 한정적일 수 밖에 없는 Thread를 얘기하는것 같다.
+아래는 필자가 얘기하는 Core의 Thread 사진이다. 아마도 친구가 말하는 Thread가 Core의 Thread인거 같다.
 
 <table>
     <tr>
