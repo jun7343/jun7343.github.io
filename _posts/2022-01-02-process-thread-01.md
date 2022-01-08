@@ -81,6 +81,15 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
 
 위의 이미지를 보면 빠른 이해가 될거라 생각된다. 유휴 상태에 빠진 block에 두번째 Thread가 명령어를 수행함으로써 같은 시간내에 수행할 수 있는 명령어 수를 높여 효율을 상승시킬 수 있었다.
 
+Hyper Thread를 사용하면 무조건 좋겠네? 이건 또 아니다. Hyper Threading를 사용함으로써 유휴 상태에 빠진 코어의 CPU 리소스를 받을 수 있게 대기해야함으로 전력 소모가 지속적으로 많이 일어나기도 한다. 그렇다면 언제 Hyper Threading을 쓰지말아야 할까?라는 생각이 들면 아래 예제와 같은 Test를 해보고 결과를 따져 사용하는걸 추천한다.
+
+- the server has more than two sockets
+- the server has a large number of physical cores
+- the operating system is not hyper-threading aware (example: Windows Server 2003)
+- the application is single-threaded or does not handle multiple threads efficiently
+- the application is already designed to maximize the use of the execution units in each core
+- the application has a very high rate of memory I/O.
+
 ## 결론
 
 Hyper Threading에 대해서 이해하는데 정말 오래걸렸다. 헷갈리는 개념들이 많고 설명을 각기 다르게 하고 잘못된 설명을 덧붙여 하는 글들도 많기 때문이다. 물론 나도 그럴 수 있다. 그래서 내 글을 읽는 독자들은 참고정도로 읽고 더 궁금한 사항은 관련 전공서적을 읽어보자 ㅋㅋ...  
