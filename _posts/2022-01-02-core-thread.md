@@ -50,15 +50,13 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
     </tbody>
 </table>
 
-위 이미지를 보면 AMD Bulldorzer의 Multi Threading이야 말로 물리적으로 Thread가 한개 더 존재하는 것이다. [Why is the hyper threading absent in AMD processors?](https://www.quora.com/Why-is-the-hyper-threading-absent-in-AMD-processors)의 내용중
+위 이미지를 보면 AMD Bulldorzer의 Multi Threading이야 말로 물리적으로 Core을 나눠 Thread가 한개 더 존재하는 것이다. AMD Bulldozer를 소개하는 [Why is the hyper threading absent in AMD processors?](https://www.quora.com/Why-is-the-hyper-threading-absent-in-AMD-processors)의 내용중
 
 > Now CPUs housed more execution units, fetched more instructions per clock, and executed more per cycle, thanks to the complex control circuits. And just when things got too predictable AMD came up with CMT in Bulldozer family. Instead of two threads being fed into one execution cluster, this architecture had two separate clusters of integer ALUs for the two threads in each core. This means lesser execution resources per thread and overall less complexity of control circuit(s). While this DID save in chip complexity and costs, it also reduced the maximum performance for single threaded applications.
 
-파파고의 힘을 빌려
-
 > AMD가 불도저 제품군의 CMT를 고안해 냈습니다. 두 개의 스레드가 하나의 실행 클러스터에 공급되는 대신, 이 아키텍처는 각 코어의 두 개의 스레드에 대해 두 개의 정수 ALU 클러스터를 가집니다. 이는 스레드 당 실행 자원이 줄어들고 제어 회로의 복잡성이 전반적으로 감소함을 의미합니다. 이를 통해 칩 복잡성과 비용이 절감되었지만 단일 스레드 애플리케이션의 최대 성능도 감소했습니다.
 
-칩 복잡성과 비용은 절감했지만 단일 스레드 애플리케이션의 최대 성능이 낮아지면서 몇몇 애플리케이션에서는 퍼포먼스를 제대로 낼 수가 없었으며 AMD의 1코어 2스레드 광고를 보고 Intel의 Hyper Thread와 같은 성능을 낼 수 있을거라 생각했던 고객들은 AMD에 뒤통수를 맞았다?라는 얘기가 있었다. 이에 관련하여 자세한 내용을 보고싶다면 [AMD 불도저 마이크로아키텍처](https://namu.wiki/w/AMD%20%EB%B6%88%EB%8F%84%EC%A0%80%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98)를 읽어보자.
+이라고 설명되어 있다. 즉 AMD Bulldozer는 칩 복잡성과 비용은 절감했지만 단일 스레드 애플리케이션의 최대 성능이 낮아지면서 몇몇 애플리케이션에서는 퍼포먼스를 제대로 낼 수가 없었으며 AMD의 1코어 2스레드 광고를 보고 Intel의 Hyper Thread와 같은 성능을 낼 수 있을거라 생각했던 고객들은 AMD에 뒤통수를 맞았다?라는 얘기가 있었다. 이에 관련하여 자세한 내용을 보고싶다면 [AMD 불도저 마이크로아키텍처](https://namu.wiki/w/AMD%20%EB%B6%88%EB%8F%84%EC%A0%80%20%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98)를 읽어보자.
 
 다시 Intel의 Hyper Threading 얘기로 돌아가 Intel이 주장하는 Hyper Threading를 보자면,
 
@@ -68,7 +66,7 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
 하지만 Intel이 주장하는 30%의 성능 효율은 Intel Socket의 수마다 상이할 수 있다. Single Socket일때 최대 30% 효율 상승이며, Dual Socket일 경우 최대 15%까지 효율을 올릴 수 있다. 그 이상의 Socket의 경우 Test를 걸쳐 효율성을 알아봐야 한다.
 
 30% 효율 상승은 어떻게 가능할 수 있었던걸까?? 먼저 Clock Cycle을 알아야한다. Clock Cycle이란 CPU가 명령어를 실행하기 위해 데이터를 가져오고 명령어를 해석하고 실행하는 세 단계를 말하며 명령어를 실행하는 주기라 해서 "명령 주기"리고도 한다. 보통 CPU 성능을 보면 3.2GHz 등을 볼 수 있는데 3.2GHz면 1초당 32억번의 Cycle이 실행된다 생각하면 된다.  
-이러한 명령어 사이클이 돌때 Thread는 유휴 상태에 빠질때가 있는데 이때 다른 코어가 유휴 상태에 빠진 코어의 CPU 리소스를 넘겨 받아 명령어를 수행함으로써 효율을 높일 수가 있다.
+이러한 명령어 사이클이 돌때 Thread는 유휴 상태에 빠질때가 있는데(보통 데이터를 memory로 부터 가져올때) 이때 Hyper Threading 기술을 통해 논리적으로 생성된 Thread가 유휴 상태에 빠진 코어의 CPU 리소스를 넘겨 받아 명령어를 수행함으로써 효율을 높일 수가 있다.
 
 <table>
     <thead>
@@ -79,20 +77,20 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
     </tbody>
 </table>
 
-위의 이미지를 보면 빠른 이해가 될거라 생각된다. 유휴 상태에 빠진 block에 두번째 Thread가 명령어를 수행함으로써 같은 시간내에 수행할 수 있는 명령어 수를 높여 효율을 상승시킬 수 있었다.
+위의 이미지를 보면 빠른 이해가 될거라 생각된다. 유휴 상태에 빠진 Unit에 두번째 Thread가 명령어를 수행함으로써 같은 시간내에 수행할 수 있는 명령어 수를 높여 효율을 상승시킬 수 있었다.
 
-Hyper Thread를 사용하면 무조건 좋겠네? 이건 또 아니다. Hyper Threading를 사용함으로써 유휴 상태에 빠진 코어의 CPU 리소스를 받을 수 있게 대기해야함으로 전력 소모가 지속적으로 많이 일어나기도 한다. 그렇다면 언제 Hyper Threading을 쓰지말아야 할까?라는 생각이 들면 아래 예제와 같은 Test를 해보고 결과를 따져 사용하는걸 추천한다.
+Hyper Threading를 사용하면 무조건 좋겠네? 이건 또 아니다. Hyper Threading를 사용함으로써 유휴 상태에 빠진 코어의 CPU 리소스를 받을 수 있게 대기해야함으로 전력 소모가 지속적으로 많이 일어나기도 한다. 애플리케이션들이 Hyper Threading 사용하지 않는데 해당 옵션을 켜놓기만 한다면 전력 낭비일 것이다.  
+그렇다면 언제 Hyper Threading을 쓰는게 적절치 않을까?라는 생각이 들면 아래 예제와 같은 Test를 해보고 결과를 따져 해당 옵션을 끄거나 키는것을 추천한다. Yes가 많을 수록 Hyper Threading을 효율적으로 사용하지 못한다 보면 될 것 같다.
 
 - the server has more than two sockets
 - the server has a large number of physical cores
-- the operating system is not hyper-threading aware (example: Windows Server 2003)
 - the application is single-threaded or does not handle multiple threads efficiently
 - the application is already designed to maximize the use of the execution units in each core
 - the application has a very high rate of memory I/O.
 
 ## 결론
 
-Hyper Threading에 대해서 이해하는데 정말 오래걸렸다. 헷갈리는 개념들이 많고 설명을 각기 다르게 하고 잘못된 설명을 덧붙여 하는 글들도 많기 때문이다. 물론 나도 그럴 수 있다. 그래서 내 글을 읽는 독자들은 참고정도로 읽고 더 궁금한 사항은 관련 전공서적을 읽어보자 ㅋㅋ...  
+Hyper Threading에 대해서 이해하는데 정말 오래걸렸다. 헷갈리는 개념들이 많고 설명을 각기 다르게 하고 잘못된 설명을 덧붙여 하는 글들도 많기 때문이다. 물론 내 글도 잘못된 정보가 있을 수 있다. 이와 같이 모든 blog post들은 자기가 학습한 내용을 바탕으로 각자 이해한 내용을 기입하기에 어떤 내용은 사실을 적시하겠지만 어떤거는 또 이상하게 각색하여 사실 또는 주제에 동떨어지는 내용도 있을수 있다. 그래서 항상 blog post는 참고용으로 읽고 정확한 내용을 이해하고 싶으면 정식 문서나 전공 서적을 읽어야하는것 같다.  
 내용이 길지만 아직까지는 Hyper Thread에 대해서만 설명했으며 친구가 말했던 Process의 Thread 역시 제대로 학습하여 기록하려 한다. 하지만 Process의 Thread를 학습하기 전에 Process를 학습하여 기록해서 공유할 예정이다.
 
 # 참조
