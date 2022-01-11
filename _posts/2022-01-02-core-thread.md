@@ -63,9 +63,9 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
 > 인텔® 하이퍼 스레딩 기술은 코어가 이전의 다른 작업이 완료되기를 기다리는 유휴 시간을 이용하여 CPU 처리량을 개선합니다(서버 응용프로그램에서 최대 30%까지).
 
 이라 주장하며 이에 덧붙여 Intel은 Hyper Threading 기술을 위해 CPU에서 자주 사용되는 부분 즉 레지스터(called architectural states)를 복제하게되어 CPU 크기가 기존 CPU 크기보다 5% 증가하였다고 한다.  
-하지만 Intel이 주장하는 30%의 성능 효율은 Intel Socket의 수마다 상이할 수 있다. Single Socket일때 최대 30% 효율 상승이며, Dual Socket일 경우 최대 15%까지 효율을 올릴 수 있다. 그 이상의 Socket의 경우 Test를 걸쳐 효율성을 알아봐야 한다.
+그리고 Intel이 주장하는 30%의 성능 효율은 Intel Socket의 수마다 상이할 수 있다. Single Socket일때 최대 30% 효율 상승이며, Dual Socket일 경우 최대 15%까지 효율을 올릴 수 있다. 그 이상의 Socket의 경우 Test를 걸쳐 효율성을 알아봐야 한다.
 
-30% 효율 상승은 어떻게 가능할 수 있었던걸까?? 먼저 Clock Cycle을 알아야한다. Clock Cycle이란 CPU가 명령어를 실행하기 위해 데이터를 가져오고 명령어를 해석하고 실행하는 세 단계를 말하며 명령어를 실행하는 주기라 해서 "명령 주기"리고도 한다. 보통 CPU 성능을 보면 3.2GHz 등을 볼 수 있는데 3.2GHz면 1초당 32억번의 Cycle이 실행된다 생각하면 된다.  
+Intel은 30% 효율 상승은 어떻게 가능할 수 있었던걸까?? 먼저 Clock Cycle을 알아야한다. Clock Cycle이란 CPU가 명령어를 실행하기 위해 데이터를 가져오고 명령어를 해석하고 실행하는 세 단계를 말하며 명령어를 실행하는 주기라 해서 "명령 주기"리고도 한다. 보통 CPU 성능을 보면 3.2GHz 등을 볼 수 있는데 3.2GHz면 1초당 32억번의 Cycle이 실행된다 생각하면 된다.  
 이러한 명령어 사이클이 돌때 Thread는 유휴 상태에 빠질때가 있는데(보통 데이터를 memory로 부터 가져올때) 이때 Hyper Threading 기술을 통해 논리적으로 생성된 Thread가 유휴 상태에 빠진 코어의 CPU 리소스를 넘겨 받아 명령어를 수행함으로써 효율을 높일 수가 있다.
 
 <table>
@@ -77,7 +77,7 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
     </tbody>
 </table>
 
-위의 이미지를 보면 빠른 이해가 될거라 생각된다. 유휴 상태에 빠진 Unit에 두번째 Thread가 명령어를 수행함으로써 같은 시간내에 수행할 수 있는 명령어 수를 높여 효율을 상승시킬 수 있었다.
+위의 이미지를 보면 빠른 이해가 될거라 생각된다. 유휴 상태에 빠진 Thread1에 두번째 Thread2가 명령어를 수행함으로써 같은 시간내에 수행할 수 있는 명령어 수를 높여 효율을 상승시킬 수 있었다.
 
 Hyper Threading를 사용하면 무조건 좋겠네? 이건 또 아니다. Hyper Threading를 사용함으로써 유휴 상태에 빠진 코어의 CPU 리소스를 받을 수 있게 대기해야함으로 전력 소모가 지속적으로 많이 일어나기도 한다. 애플리케이션들이 Hyper Threading 사용하지 않는데 해당 옵션을 켜놓기만 한다면 전력 낭비일 것이다.  
 그렇다면 언제 Hyper Threading을 쓰는게 적절치 않을까?라는 생각이 들면 아래 예제와 같은 Test를 해보고 결과를 따져 해당 옵션을 끄거나 키는것을 추천한다. Yes가 많을 수록 Hyper Threading을 효율적으로 사용하지 못한다 보면 될 것 같다.
@@ -98,8 +98,6 @@ Hyper Threading에 대해서 이해하는데 정말 오래걸렸다. 헷갈리�
 - [Intel’s Hyper-Threading Technology](https://techgenix.com/intels-hyper-threading-technology/)
 - [What are Threads in Computer Processor or CPU?](https://www.geeksforgeeks.org/what-are-threads-in-computer-processor-or-cpu/)
 - [하이퍼 스레딩이란 무엇입니까?](https://www.intel.co.kr/content/www/kr/ko/gaming/resources/hyper-threading.html)
-- [Multi Thread Programming](https://lazymankook.tistory.com/32)
-- [Operating System - Multi-Threading](https://www.tutorialspoint.com/operating_system/os_multi_threading.htm)
 - [Anatomy of a CPU](https://www.techspot.com/article/2000-anatomy-cpu/)
 - [Will Hyper-Threading Improve Processing Performance?](https://medium.com/@ITsolutions/will-hyper-threading-improve-processing-performance-15cba11add74)
 - [Why is the hyper threading absent in AMD processors?](https://www.quora.com/Why-is-the-hyper-threading-absent-in-AMD-processors)
