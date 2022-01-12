@@ -25,14 +25,14 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
         <th>Intel`s Hyper Threading</th>
     </tr>
     <tr>
-        <td><img src="/assets/images/os/process-thread-01/intel_single-thread.jpeg" alt="single thread" /></td>
-        <td><img src="/assets/images/os/process-thread-01/intel_hyper-thread.jpeg" alt="hyper thread" /></td>
+        <td><img src="/assets/images/os/core-thread/intel_single-thread.jpeg" alt="single thread" /></td>
+        <td><img src="/assets/images/os/core-thread/intel_hyper-thread.jpeg" alt="hyper thread" /></td>
     </tr>
     <tr>
         <th colspan="2">Hyper Thread and Non Hyper Thread</th>
     </tr>
     <tr>
-        <td colspan="2"><img src="/assets/images/os/process-thread-01/hyper-thread and non hyper-thread.gif" alt="hyper thread and non hyper thread" /></td>
+        <td colspan="2"><img src="/assets/images/os/core-thread/hyper-thread and non hyper-thread.gif" alt="hyper thread and non hyper thread" /></td>
     </tr>
 </table>
 
@@ -46,7 +46,7 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
         <th>CMT And SMT</th>
     </thead>
     <tbody>
-        <td><img src="/assets/images/os/process-thread-01/bulldozer-and-intel.jpeg" alt="bulldozer and intel" /></td>
+        <td><img src="/assets/images/os/core-thread/bulldozer-and-intel.jpeg" alt="bulldozer and intel" /></td>
     </tbody>
 </table>
 
@@ -73,7 +73,7 @@ Intel은 30% 효율 상승은 어떻게 가능할 수 있었던걸까?? 먼저 C
         <th>Intel`s Hyper Threading Idle Example</th>
     </thead>
     <tbody>
-        <td><img src="/assets/images/os/process-thread-01/hyper-threading-idle.gif" alt="hyper threading idle example" /></td>
+        <td><img src="/assets/images/os/core-thread/hyper-threading-idle.gif" alt="hyper threading idle example" /></td>
     </tbody>
 </table>
 
