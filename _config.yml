@@ -35,6 +35,9 @@ navigation_links:
   - title: About
     url: /about
 
+  - title: Github
+    url: https://github.com/jun7343
+
   - title: Search
     url: /search
 
@@ -65,7 +68,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
+    css_class: "highlight"
 
 # Pagination
 paginate: 5
