@@ -14,7 +14,7 @@ excerpt: 컴퓨터 시스템 동작 구조를 보며 각 하드웨어의 역할�
 CPU는 Memory에 올라와있는 프로그램의 연산을 처리하는 역할을 합니다. CPU에 존재하는 Register 종류 중 하나인 [PC](https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%B9%B4%EC%9A%B4%ED%84%B0)가 가르키는 다음 명령어 주소를 통해 프로그램의 명령어를 처리하며, 명령어를 처리하기 이전 CPU는 [Interrupt](https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%EB%9F%BD%ED%8A%B8)가 들어왔는지 Interrupt line을 체크합니다. 만약 Interrupt가 들어왔다면, CPU는 운영체제에게 제어가 넘어가며 운영체제는 Interrupt 처리를 수행하게 됩니다.
 Interrupt line별로 인터럽트 백터와 인터럽트 처리 루틴이 존재하게 되는데 인터럽트 백터의 경우 Interrupt line의 번호와 Interrupt를 처리해야할 주소를 쌍으로 가지고 있습니다.
 인터럽트 처리 루틴 또는 인터럽트 핸들러는 CPU가 커널 함수를 통해 수행할 루틴을 얘기합니다.
-인터럽트 종류에는 크게 두가지가 있는데, 하드웨어 인터럽트와 Trap이 존재합니다. 하드웨어 인터럽트는 말 그대로 하드웨어서 건 Interrupt를 얘기하며 Trap의 경우 소프트웨어에서 의도적으로 건 Interruopt를 얘기합니다. 대표적으로 Exception과 System Call이 존재합니다.
+인터럽트 종류에는 크게 두가지가 있는데, 하드웨어 인터럽트와 Trap이 존재합니다. 하드웨어 인터럽트는 말 그대로 하드웨어서 요청한 Interrupt를 얘기하며 Trap의 경우 소프트웨어에서 의도적으로 요청한 Interrupt를 얘기합니다. 대표적으로 Exception과 System Call이 존재합니다.
 System Call은 사용자 프로그램이 명령어에 의도적으로 Interrupt line을 기입하여 interrupt를 발생시키는 것을 얘기하며 Exception의 경우 사용자 프로그램이 실행할 수 없는 명령어 즉 사용자 프로그램에서 벗어난 권한을 수행하려 할 때 Interrupt line이 자동으로 셋팅되어 사용자 프로그램을 중단 시킵니다.
 
 ## Mode Bit
