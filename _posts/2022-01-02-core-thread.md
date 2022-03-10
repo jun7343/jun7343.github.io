@@ -38,7 +38,7 @@ excerpt: 내 친구중에 기계과를 나왔지만 개발에 흥미가 생겨 �
 
 먼저 설명하기 전 인텔의 하이퍼 스레딩 소개글을 읽고 오자. [하이퍼 스레딩이란 무엇입니까?](https://www.intel.co.kr/content/www/kr/ko/gaming/resources/hyper-threading.html)  
 소개글을 보면, 물리적으로는 one core가 존재하지만 Intel의 Hyper Threading 기술을 통해 논리적으로 two core가 존재하게끔 만들어 준다고 나와있다. 실제로는 물리적으로는 core가 하나뿐이지만 Intel`s Hyper Threading 기술을 통해 OS는 두개의 코어로 인식이 된다는 얘기다.  
-이때 눈치챌 수 있는것으로 Hyper Threading은 물리적으로 Multi Thread가 존재하는게 아니였으며 기존 물리적 Single Thread에서 추가 되는 가상의 Thread 기술이라는걸 알 수 있다. 잠시 AMD 얘기를 해보자면 AMD도 Multi Thread라 소개하며 내놓은 Bulldozer 라는 제품이 있다. "어? 뭐지? Multi Threading이 어떻게 가능하지? Hyper Thread는 Intel 고유의 기술아냐?" 라고 나는 생각했었다. 알고보니 AMD Bulldozer의 Multi Thread는 CMT(Clustering Multi Threading)이며 Intel은 SMT(Simultaneous Multi Threading)이다.  
+이때 눈치챌 수 있는것으로 Hyper Threading은 물리적으로 Multi Thread가 존재하는게 아니였으며 기존 물리적 Single Thread에서 추가 되는 가상의 Thread 기술이라는걸 알 수 있다. 잠시 AMD 얘기를 해보자면 AMD도 Multi Thread라 소개하며 내놓은 Bulldozer 라는 제품이 있다. "어? 뭐지? Multi Threading이 어떻게 가능하지? Hyper Thread는 Intel의 고유 기술아냐?" 라고 나는 생각했었다. 알고보니 AMD Bulldozer의 Multi Thread는 CMT(Clustering Multi Threading)이며 Intel은 SMT(Simultaneous Multi Threading)이다.  
 이 둘의 차이가 무엇인지 알아보자.
 
 <table>
