@@ -34,7 +34,8 @@ Timer 하드웨어는 사용자가 프로그램이 무한 루프 코드를 통�
 
 ## DMA(Direct Memory Access) Controller
 
-DMA Controller는 CPU의 일을 돕기 위해 존재하는 Controller 입니다. I/O Device가 메인 메모리의 데이터에 접근하기 위해 CPU에게 Interrupt를 걸어 데이터를 옮겨달라고 요청하게 됩니다. 이러한 요청이 빈번하게 발생하는 I/O Device의해 CPU는 제 역할을 수행할 수 없으며 비효율적인 상태가 됩니다. 이때 DMA Controller가 CPU의 데이터 옮기는 역할을 대신 수행하게 되며 블록 단위로 정보를 담아 메인 메모리에 copy후 CPU에 interrupt를 걸어 데이터를 다 옮겼다고 알려주게 됩니다. 이때 CPU와 DMA Controller가 동시에 메인 메모리 데이터에 접근하게 되어 데이터 일관성이 깨질 수 있는 상황이 발생할 수 있는데 이때 이러한 흐름 제어 역할을 하는것이 Memory Controller의 역할입니다.
+DMA Controller는 CPU의 일을 돕기 위해 존재하는 Controller 입니다. I/O Device가 메인 메모리의 데이터에 접근하기 위해 CPU에게 Interrupt를 걸어 데이터를 옮겨달라고 요청하게 됩니다. 이러한 요청이 빈번하게 발생하는 I/O Device의해 CPU는 제 역할을 수행할 수 없으며 비효율적인 상태가 됩니다. 이때 DMA Controller가 CPU의 데이터 옮기는 역할을 대신 수행하게 되며 블록 단위로 정보를 담아 메인 메모리에 copy후 CPU에 interrupt를 걸어 데이터를 다 옮겼다고 알려주게 됩니다.
+어느 시점에 CPU와 DMA Controller가 동시에 메인 메모리의 같은 데이터에 접근하게 되어 데이터 일관성이 깨질 수 있는 상황이 발생할 수 있습니다. 이때 이러한 메모리 접근 흐름 제어 역할을 하는것이 Memory Controller의 역할입니다.
 
 ## 참조
 
