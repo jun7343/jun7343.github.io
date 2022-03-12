@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 컴퓨터 시스템은 어떻게 동작할까??
+title: System Structure
 categories: [OS, Program, System Structure]
 excerpt: 컴퓨터 시스템 동작 구조를 보며 각 하드웨어의 역할을 알아본다.
 ---
