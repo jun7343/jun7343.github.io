@@ -93,7 +93,30 @@ wait()은 부모 프로세스가 자식 프로세스가 종료되기를 기다�
 
 ![process management08](/assets/images/os/process-management/process-management08.png)
 
-- 프로세스 간에 공유 데이터를 일체 사용하지 않고 메세지를 주고 받으며 통신하는 방식이다.
+- 프로세스 간에 공유 변수를 일체 사용하지 않고 메세지를 주고 받으며 통신하는 방식이다.
 - 메세지 통신을 하는 시스템은 커널에 의해 send와 receive 연산을 제공 받는다.
 
+### 직접 통신(Direct Communication)
+
+- 통신하려는 프로세스 이름을 명시적으로 표시한다.
+- 각 쌍의 프로세스에게는 오직 하나의 링크만 존재한다.
+
+### 간접 통신(Indirect Communication)
+
+- 메시지를 메익 박스 또는 포트로 전달 받는다.
+- 각 메일 박스에는 고유의 ID가 있으며 메일 박스를 공유하는 프로세스만 통신 할 수 있다.
+- 하나의 링크가 여러 프로세스에게 할당 될 수 있다.
+
+## 공유 메모리 방식(Shared Memory)
+
 ![process management09](/assets/images/os/process-management/process-management09.png)
+
+- 공유 메모리 방식은 프로세스들이 주소 공간 일부를 공유 한다.
+- 서로의 데이터에 일관성 문제가 발생할 수 있다.
+- 프로세스간 동기화 문제를 스스로 책임져야 한다.
+- 공유 메모리 방식은 커널에게 공유 메모리를 사용하겠다고 알린후 사용할 수 있다.
+
+## 참조
+
+- [운영체제 - 반효경 교수님](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
+- [Process Management 1 & 2 - 제이온](https://steady-coding.tistory.com/522)
