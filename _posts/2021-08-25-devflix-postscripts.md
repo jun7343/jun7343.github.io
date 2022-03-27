@@ -2,6 +2,7 @@
 layout: post
 title: Devflix 프로젝트 후기
 categories: [Projects]
+excerpt: 나의 Devflix 프로젝트 완성 후기.
 ---
 
 ### Devflix
