@@ -2,7 +2,7 @@
 layout: post
 title: Memory Management
 categories: [OS, Memory]
-excerpt: 메로리에 적재되는 것은 무엇이며 어떻게 적재되고 관리되어지는지 알아본다.
+excerpt: 메모리에 적재되는 것은 무엇이며 어떻게 적재되고 관리되어지는지 알아본다.
 ---
 
 ## Logical Address & Physical Address
