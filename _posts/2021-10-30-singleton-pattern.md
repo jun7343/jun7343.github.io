@@ -83,7 +83,7 @@ public class LazyInitialization {
 <br>
 
 - **Thread-Safe Lazy Initialization**  
-  Lazy Initialization의 단점을 보안하기 위해 동기화 블럭(syncronizaed)를 통해 Thread-Safe한 상황을 만들 수 있다. 다만 메서드에 동기화 블럭을 선언함으로써 객체 생성 메서드를 호출시 매번 스레드를 lock, unlock 하기에 성능이 악화되는 단점이 있다.
+  Lazy Initialization의 단점을 보완하기 위해 동기화 블럭(syncronizaed)를 통해 Thread-Safe한 상황을 만들 수 있다. 다만 메서드에 동기화 블럭을 선언함으로써 객체 생성 메서드를 호출시 매번 스레드를 lock, unlock 하기에 성능이 악화되는 단점이 있다.
 
 ```java
 public class ThreadSafeLazyInitialization {

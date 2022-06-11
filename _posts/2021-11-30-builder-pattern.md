@@ -154,7 +154,7 @@ public class Main {
 # 결론
 
 위와 같은 방법으로 빌더 패턴을 사용하여 객체를 유연하게 생성할 수 있다. Builder Pattern을 사용하려는 객체 내부에 Builder Class를 만들어 똑같은 필드를 작성 후 메서드 체이닝 방식으로 Data를 주입 받아 마지막에 build 메서드를 통해 원래의 객체를 return 함으로써 사용할 수 있다. 메서드 체이닝이 무엇인지 알고 싶다면 [Method Chaining In Java with Examples](https://www.geeksforgeeks.org/method-chaining-in-java-with-examples/) 에서 확인해보고 코드를 확인할 수 있다.  
-물론 빌더 패턴을 사용할 떄 반드시 주입 받고자 하는 Parameter가 존재할 것이다. 이 역시 보안할 수 있는 방법이 있다. [Required Builder Pattern](https://github.com/jun7343/java-drill/blob/main/src/main/java/io/drill/java/design_pattern/creational/builder/RequiredExampleDomain.java)  
+물론 빌더 패턴을 사용할 떄 반드시 주입 받고자 하는 Parameter가 존재할 것이다. 이 역시 보완할 수 있는 방법이 있다. [Required Builder Pattern](https://github.com/jun7343/java-drill/blob/main/src/main/java/io/drill/java/design_pattern/creational/builder/RequiredExampleDomain.java)  
 나는 개인적으로 객체의 불변성을 선호하기에 Setter를 사용하지 않고 Builder Pattern을 이용해 객체 생성과 초기화를 함께 한다. 이렇게 된다면 코드를 읽는 사람에게서 객체 내부의 데이터가 불변하다는 보장을 줄 수 있는 장점이 있다.
 
 ---
