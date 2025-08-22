@@ -1,8 +1,8 @@
 ---
 layout: post
-title: NCP(naver cloud platform)에서 okHttp gRPC client 연동 이슈
+title: ALPN 협상 실패? 그게 뭔데?
 categories: [NCP, gRPC, Network]
-excerpt: NCP에서 okHttp gRPC client 연동이 안되었던 이슈를 공유합니다.
+excerpt: NCP(Naver Cloud Plaform)에서 okHttp gRPC client 연동이 안되었던 이슈를 공유합니다.
 ---
 
 okHttp gRPC client가 netty 기반 gRPC 서버 요청 실패한 이슈를 공유드립니다.
@@ -82,7 +82,7 @@ gRPC는 스트리밍을 지원하기 위해 멀티플렉싱이 필수적이며, 
 ![envoy proxy](/assets/images/ncp-grpc-issue/envoy-proxy.png)
 > [Envoy Proxy](https://www.envoyproxy.io/)
 
-Envoy Proxy는 L7(애플리케이션 계층)에서 동작하는 오픈소스 프록시로, 다양한 프로토콜을 이해하고 고급 기능 및 프로토콜 변환을 지원합니다.  
+Envoy Proxy는 L7(애플리케이션 계층)에서 동작하는 오픈소스 프록시로, 다양한 프로토콜을 이해하고 고급 기능 및 프로토콜 변환(gRPC-web <-> gRPC HTTP/2)을 지원합니다.  
 
 이 방식을 선택하면 **기존 코드 수정 없이도 문제를 해결**할 수 있고, 추후 gRPC 서비스를 추가할 때도 확장성 측면에서 유리합니다.  
 
