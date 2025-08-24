@@ -63,13 +63,16 @@ ALB와 Nginx 양쪽에서 TLS 검증을 진행하여 gRPC 서버로 HTTP/2 통�
 
 ### 2번: Armeria를 통한 gRPC 변환
 
-Nginx 대신 **Armeria 서버**를 도입하여 HTTP/1.0·1.1 기반의 gRPC 요청을 수신하고, 이를 서비스로 전달하는 프록시 역할을 수행합니다.
+기존 Netty 기반 gRPC Client가 아닌 **Armeria 서버**를 도입하여 gRPC 요청을 처리하는 방법입니다.
 
 ![Line Blog](/assets/images/ncp-grpc-issue/line-blog.png)  
 > 출처: [Armeria로 Reactive Streams와 놀자! - 2](https://engineering.linecorp.com/ko/blog/reactive-streams-with-armeria-2)
 
-gRPC는 스트리밍을 지원하기 위해 멀티플렉싱이 필수적이며, 이 때문에 공식적으로는 HTTP/2만 지원합니다.  
-그렇다면 Armeria는 어떻게 HTTP/1.1 환경에서도 gRPC를 처리할 수 있을까요? 자세한 내용은 아래 글을 참고하세요. (저는 아직 완전히 이해하지 못했습니다 😅)
+라인에서 개발한 Armeria는 HTTP/1, HTTP/2, gRPC, Thrift 등 다양한 프로토콜을 하나의 서버에서 동시에 지원할 수 있는 비동기 MSA 프레임워크입니다. 이를 통해 여러 서비스 간 통신을 유연하게 처리하고, 고성능·비동기 기반의 서버 개발을 쉽게 할 수 있습니다.
+
+특히 Armeria의 경우 gRPC 프로토콜을 HTTP/1.1 에서도 요청 수신될 수 있도록 지원하고 있습니다. (gRPC-Wev)
+그런데 알기로는 gRPC는 스트리밍을 지원하기 위해 멀티플렉싱이 필수적이며, 이 때문에 공식적으로는 HTTP/2만 지원하는걸로 알고있습니다.  
+그런데 Armeria는 어떻게 HTTP/1.1 환경에서도 gRPC를 처리할 수 있을까요? 자세한 내용은 아래 글을 참고하세요. (저는 아직 완전히 이해하지 못했습니다 😅)
 
 👉 [Armeria는 어떻게 gRPC를 HTTP/1.1에서 사용할까?](https://easywritten.com/post/how-does-armeria-use-grpc-over-http-1/)
 
