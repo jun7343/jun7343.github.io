@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 트래픽 급격하게 몰려도 안정적이게 컨텐츠 조회수/응원수 카운팅 하기
+title: 트래픽 급격하게 몰려도 안정적으로 컨텐츠 조회수/응원수 카운팅 하기
 categories: [Architecture, CS, System Design]
 excerpt: 트래픽이 몰려도 조회수/응원수를 안정적으로 카운팅하기 위한 나름의 고민
 ---
