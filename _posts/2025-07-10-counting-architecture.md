@@ -190,7 +190,7 @@ class ContentInMemoryRepositoryImpl: ContentInMemoryRepository {
 
 첫 번째로, `ConcurrentHashMap`은 기본 capacity(16)와 load factor(0.75)를 가지고 있습니다.  
 맵의 크기가 임계치(capacity * load factor)에 도달하면 재해싱이 발생하고, 이 과정에서 지연이 생깁니다.  
-> 버킷 용량은 2배수로 증가하게 됩니다.
+> 버킷 용량 2배수로 증가한 맵 추가되며 해당 맵으로 부터 데이터 이관하는 과정에서 지연이 발생합니다.
 
 추가로 컨텐츠 수가 많아질수록 메모리 부담도 커지므로, 초기 용량을 적절히 계산해 설정하는 것이 중요합니다.  
 즉 재해싱 이슈로 인한 지연 이슈와 이를 고려한 메모리 부담을 고려해야합니다.
