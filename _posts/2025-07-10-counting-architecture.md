@@ -195,6 +195,7 @@ class ContentInMemoryRepositoryImpl: ContentInMemoryRepository {
 추가로 컨텐츠 수가 많아질수록 메모리 부담도 커지므로, 초기 용량을 적절히 계산해 설정하는 것이 중요합니다.  
 즉 재해싱 이슈로 인한 지연 이슈와 이를 고려한 메모리 부담을 고려해야합니다.
 
+그래서 재해싱을 최대한 방지하기 위해 초기값 설정이 중요합니다.    
 다만 5초마다 DB 동기화 과정에서 Map이 비워지므로, “5초 동안 얼마나 많은 컨텐츠가 조회될까?”를 고려한 초기값 설정을 하면 될것 같습니다.
 > 재해싱 과정이 궁금하시다면 [Load Factor and Rehashing](https://www.geeksforgeeks.org/dsa/load-factor-and-rehashing/), [Load Factor in HashMap in Java with Examples](https://www.geeksforgeeks.org/dsa/load-factor-in-hashmap-in-java-with-examples/) 를 참고하시면 될 것 같습니다.
 
