@@ -195,8 +195,8 @@ class ContentInMemoryRepositoryImpl: ContentInMemoryRepository {
 추가로 컨텐츠 수가 많아질수록 메모리 부담도 커지므로, 초기 용량을 적절히 계산해 설정하는 것이 중요합니다.  
 즉 재해싱 이슈로 인한 지연 이슈와 이를 고려한 메모리 부담을 고려해야합니다.
 
-그래서 재해싱을 최대한 방지하기 위해 초기값 설정이 중요합니다.    
-다만 5초마다 DB 동기화 과정에서 Map이 비워지므로, “5초 동안 얼마나 많은 컨텐츠가 조회될까?”를 고려한 초기값 설정을 하면 될것 같습니다.
+그래서 재해싱을 최대한 방지하기 위해 초기 capacity(버킷 용량) 설정이 중요합니다.    
+다만 5초마다 DB 동기화 과정에서 Map이 비워지므로, “5초 동안 얼마나 많은 컨텐츠가 조회될까?”를 고려한 capacity 설정을 하면 될것 같습니다.
 > 재해싱 과정이 궁금하시다면 [Load Factor and Rehashing](https://www.geeksforgeeks.org/dsa/load-factor-and-rehashing/), [Load Factor in HashMap in Java with Examples](https://www.geeksforgeeks.org/dsa/load-factor-in-hashmap-in-java-with-examples/) 를 참고하시면 될 것 같습니다.
 
 ---
@@ -248,7 +248,7 @@ interface ContentJpaRepository: JpaRepository<ContentEntity, Long> {
 예를 들어, 조회수 업데이트 메서드에 `@Retryable`을 선언하면 충돌이 발생할 경우  
 지정된 횟수만큼 자동으로 재시도가 수행됩니다.  
 재시도 횟수는 보통 **확장된 애플리케이션 인스턴스 수**에 맞춰 설정하는 것이 적절합니다.
-> 5개의 어플리케이션이 동일한 컨텐츠 조회수를 업데이트 할 시 모든 어플리케이션이 5번 이내에 업데이트 성공할 수 있기 때문에.
+> 5개의 어플리케이션이 동일한 컨텐츠 조회수를 업데이트 할 시 모든 어플리케이션이 5번 이내에 업데이트 성공할 수 있기 때문입니다.
 
 낙관적 락을 통해 동시성 이슈 해결과 업데이트 요청 과정에서 실패시 재시도 요청을 통해 정합성 문제를 해결할 수 있습니다.
 
