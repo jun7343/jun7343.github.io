@@ -24,11 +24,23 @@ excerpt: 트래픽이 몰려도 조회수/응원수를 안정적으로 카운팅
 첫 번째로 단순하게 조회수를 업데이트하는 로직을 떠올릴 수 있습니다.
 
 ```kotlin
-fun findPost(id: Int): PostDto {
-    val post = repository.findPost(id)
-    repository.incrementPostViewCount(id)
+class ContentService(
+    private repository: ContentJpaRepository
+) {
+    fun findPost(id: Int): PostDto {
+        val post = repository.findPost(id)
+        repository.incrementViewCountById(id)
 
-    return post
+        return post
+    }
+}
+```
+```kotlin
+interface ContentJpaRepository: JpaRepository<ContentEntity, Long> {
+    @Modifying
+    @Query("update ContentEntity c set c.viewCount = c.viewCount + 1 where c.id = :id")
+    @Transactional
+    fun incrementViewCountById(@Param("id") id: Long)
 }
 ```
 > 컨텐츠를 조회시 해당 컨텐츠의 조회수를 +1 업데이트 한다.
