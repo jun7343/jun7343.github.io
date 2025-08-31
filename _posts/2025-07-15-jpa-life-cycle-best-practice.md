@@ -230,7 +230,9 @@ class ContentEntity {
 이를 위해 **스케줄러**를 두어 주기적으로 미사용 파일을 정리합니다.  
 
 ```kotlin
-class FileScheduler {
+class FileScheduler(
+    private val fileRepository: FileRepository
+) {
     @Scheduled(cron = "0 0 * * * *") // Runs every hour
     fun cleanupUnusedFiles() {
         fileRepository.cleanUpUnusedFiles(duration = Duration.ofMinutes(30))
