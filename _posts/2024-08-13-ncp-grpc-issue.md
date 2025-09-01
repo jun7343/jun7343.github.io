@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ALPN 협상 실패? 그게 뭔데?
-categories: [NCP, gRPC, Network]
+categories: [NCP, gRPC, Network, CS]
 excerpt: NCP(Naver Cloud Plaform)에서 okHttp gRPC client 연동이 안되었던 이슈를 공유합니다.
 ---
 
