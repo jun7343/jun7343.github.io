@@ -217,7 +217,7 @@ class ContentEntity {
 ```
 
 콘텐츠 삭제 시에도 마찬가지로 `@PostRemove` 이벤트를 활용합니다.  
-연관된 파일의 `isUsed` 값을 `false`로 변경해 파일이 더 이상 참조되지 않음을 표시합니다.  
+컨텐츠 엔티티가 삭제(DELETE)가 완료되면 연관된 파일의 `isUsed` 값을 `false`로 변경해 파일이 더 이상 참조되지 않음을 표시합니다.  
 
 이렇게 하면 콘텐츠 서비스는 파일 처리 로직을 몰라도 되고,  
 온전히 콘텐츠 관련 로직만 다루면 됩니다.  
@@ -226,8 +226,7 @@ class ContentEntity {
 
 ### 실제 파일 정리
 
-여기서 남는 문제는 "파일 상태만 바꿨을 뿐, 실제 파일 삭제는 언제?"입니다.  
-이를 위해 **스케줄러**를 두어 주기적으로 미사용 파일을 정리합니다.  
+여기서 남는 문제는 "파일 상태만 바꿨을 뿐, 실제 파일 삭제는 언제?"인데, 이를 해결하기 위해 **스케줄러**를 두어 주기적으로 미사용 파일을 정리합니다.  
 
 ```kotlin
 class FileScheduler(
@@ -242,6 +241,38 @@ class FileScheduler(
 
 스케줄러는 일정 주기마다 실행되며,  
 업로드 후 일정 시간 동안 `isUsed = false` 상태로 남아 있는 파일을 찾아 실제 클라우드에서 삭제하고 DB 엔티티도 정리합니다.  
+
+추가로, 스케줄러는 스케일 아웃 환경(멀티 인스턴스)에서는 **락(lock)** 처리가 필요합니다.  
+그렇지 않으면 여러 인스턴스에서 동시에 실행되어 충돌이 발생할 수 있습니다.
+
+```kotlin
+class FileScheduler(
+    private val fileRepository: FileRepository
+) {
+    @Scheduled(cron = "0 0 * * * *") // Runs every hour
+    @SchedulerLock(name = "cleanupUnusedFiles", lockAtMostFor = "PT30S", lockAtLeastFor = "PT10S")
+    fun cleanupUnusedFiles() {
+        fileRepository.cleanUpUnusedFiles(duration = Duration.ofMinutes(30))
+    }
+}
+```
+```groovy
+dependencies {
+    ...
+
+    implementation("net.javacrumbs.shedlock:shedlock-spring:6.9.0")
+	implementation("net.javacrumbs.shedlock:shedlock-provider-redis-spring:6.9.0")
+
+    ...
+}
+```
+
+위 코드는 예시이며, 저는 `net.javacrumbs.shedlock:shedlock-spring` 오픈소스를 사용했습니다.
+`@SchedulerLock` 어노테이션을 활용해 단일 인스턴스에서만 스케줄러가 실행되도록 보장할 수 있습니다.
+
+물론 Kubernetes 환경에서는 특정 Pod를 리더로 선출해 스케줄러를 실행하는 방법도 있지만,
+간단하게 적용 가능한 방식으로 ShedLock을 선택했습니다.
+> 참조: [Using Leader Election with Spring Cloud Kubernetes and Spring Scheduler](https://medium.com/@pedrommj8/using-leader-election-with-spring-cloud-kubernetes-and-spring-scheduler-8f7ea3e3e694)
 
 ---
 
