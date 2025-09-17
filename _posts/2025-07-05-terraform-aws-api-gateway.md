@@ -16,8 +16,11 @@ API Gateway 모듈은 Git Repo에 많지만 Terraform 버전 이슈로 사용하
 
 바로 **aws_api_gateway_resource** 리소스를 생성해야 할 때입니다.
 
+![AWS API Gateway Console](/assets/images/terraform-gateway/aws-gateway-console.png)
+> AWS Gateway 리소스(API Path)와 리소스 통합구성 화면
+
 ```tf
-resource "aws_api_gateway_rest_api" "MyDemoAPI" {8*
+resource "aws_api_gateway_rest_api" "MyDemoAPI" {
   name        = "MyDemoAPI"
   description = "This is my API for demonstration purposes"
 }
