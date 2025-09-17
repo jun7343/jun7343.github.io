@@ -1,11 +1,11 @@
 ---
 layout: post
-title: OpenAPI로 AWS API Gateway 리소스 유연하게 생성하기 By Terraform
+title: OpenAPI로 AWS API Gateway 리소스 일괄 생성하기 By Terraform
 categories: [AWS, Terraform, DevOps, OpenAPI]
-excerpt: OpenAPI로 AWS API Gateway 리소스 유연하게 생성하기 By Terraform
+excerpt: OpenAPI로 AWS API Gateway 리소스 일괄 생성하기 By Terraform
 ---
 
-API Gateway 모듈은 Git Repo에 많지만 Terraform 버전 이슈로 사용하지 못하게 되어 직접 모듈을 구성하던 중, 기본적으로 알고 있을 수도 있는 내용이지만 **OpenAPI Spec으로 API Gateway의 API 리소스를 효율적으로 생성하는 방법**을 공유하려 합니다.  
+API Gateway 모듈은 Git Repo에 많지만 Terraform 버전 이슈로 사용하지 못하게 되어 직접 모듈을 구성하던 중, 기본적으로 알고 있을 수도 있는 내용이지만 **OpenAPI Spec으로 API Gateway의 리소스를 일괄 생성하는 방법**을 공유하려 합니다.  
 
 [API Gateway 모듈 생성 Ref](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_account)
 
