@@ -47,7 +47,7 @@ Kafka를 통해 수신한 미디어 메시지는 스케일아웃 환경에서 �
 이런 객체를 직렬화하려면 운영체제 수준의 네트워크 상태까지 다뤄야 하므로 직렬화가 불가능하거나 의미가 없습니다.
 
 ![Oracle Doc](/assets/images/real-time-location-issue/oracle-doc.png)
-> [Object Serialization: FAQ](https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html)
+> 비슷한 사례로 시스템 레벨의 스레드가 직렬화 될 수 없는 이유에 대한 설명 ([Object Serialization: FAQ](https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html))
 
 
 ---
