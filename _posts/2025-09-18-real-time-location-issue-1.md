@@ -164,8 +164,6 @@ class LiveDeviceMessageRedisListener(
 - **MessageListener** → 수신된 메시지 처리 담당  
 - **TaskExecutor** → 메시지 처리용 스레드풀 관리  
 
-이 구조를 통해 Redis Pub/Sub 기반의 메시지 브로드캐스팅을 안정적이고 확장성 있게 구현할 수 있습니다.
-
 ![kafka-redis-broadcasting](/assets/images/real-time-location-issue/kafka-redis-broadcasting.png)
 > Kafka and Redis Broadcasting
 
