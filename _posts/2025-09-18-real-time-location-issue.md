@@ -221,17 +221,23 @@ class LiveMediaSubscriptionRepository {
         }
         
         if (liveMediaInfos.isNotEmpty()) {
-            clientSseSubscription.entries
-                .forEach {
-                    sendEvent(
-                        clientId = it.key,
-                        id = RandomStringUtils.secureStrong().next(5),
-                        name = "liveMapLocation",
-                        /*
-                        * 타임스탬프 기준으로 정렬하여 전송
-                        */
-                        data = liveMediaInfos.sortBy { it -> it.timestamp }
-                    )
+            /*
+            * 타임스탬프 기준으로 정렬하여 전송
+            */
+            liveMediaInfos.sortBy { it -> it.timestamp }
+
+            runBlocking {
+                clientSseSubscription.entries
+                    .map {
+                        async {
+                            sendEvent(
+                                clientId = it.key,
+                                id = RandomStringUtils.secureStrong().next(5),
+                                name = "liveMapLocation",
+                                data = liveMediaInfos
+                            )
+                        }
+                    }.awaitAll()
                 }
             }
         }
