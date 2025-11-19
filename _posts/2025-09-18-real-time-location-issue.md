@@ -195,7 +195,7 @@ class LiveMediaSubscriptionRepository {
     companion object {
         private val clientSseSubscription = ConcurrentHashMap<String, SseEmitter>()
         /*
-         * 실시간 미디어 정보를 타임스탬프 기준으로 정렬하여 보관
+         * 실시간 미디어 정보 버퍼 공간
          */
         private val liveMediaQueue = ConcurrentLinkedQueue<LiveMediaMessageDto>()
         private val latestLocationTimestampMap = ConcurrentHashMap<String, Long>()
@@ -227,6 +227,9 @@ class LiveMediaSubscriptionRepository {
                         clientId = it.key,
                         id = RandomStringUtils.secureStrong().next(5),
                         name = "liveMapLocation",
+                        /*
+                        * 타임스탬프 기준으로 정렬하여 전송
+                        */
                         data = liveMediaInfos.sortBy { it -> it.timestamp }
                     )
                 }
